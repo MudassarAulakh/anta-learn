@@ -4,21 +4,20 @@ import NotificationCard from "./NotificationModalCard";
 
 const NotificationModalCardSection = () => {
   return (
-    <div className=" h-[100%]">
+    <div className="h-[100%]">
       {(Array.isArray(NotificationModalCardArray)
         ? NotificationModalCardArray
         : []
       ).map((val, index) => (
-        <>
+        <div key={index}>
           <div className="border border-gray-300"></div>
           <NotificationCard
             title={val.title}
             img={val.img}
             paragraph={val.paragraph}
             date={val.date}
-            key={index}
           />
-        </>
+        </div>
       ))}
     </div>
   );
