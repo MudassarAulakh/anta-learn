@@ -1,5 +1,7 @@
+import AdminLeftBar from "@/components/Admin/AdminLeftBar/AdminLeftBar";
+import Navbar from "@/components/Navbar/Navbar";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -18,9 +20,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
+       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >{children}
+      > <Navbar />
+      <div className="flex">
+        <div className="w-[17%]">
+          <AdminLeftBar />
+        </div>
+        <div className="w-[83%]">{children}</div>
+      </div>
       </body>
     </html>
   );
