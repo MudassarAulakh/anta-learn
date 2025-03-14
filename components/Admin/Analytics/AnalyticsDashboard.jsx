@@ -7,7 +7,7 @@ const AnalyticsDashboard = () => {
   return (
     <div>
       <div className="flex justify-between items-center ">
-        <h2 className="text-2xl font-semibold">Detailed Analytics</h2>
+        <h2 className="text-3xl font-semibold">Detailed Analytics</h2>
         <Button className="bg-[#13123D] cursor-pointer text-white">
           Export Analytics Data
           <span className="p-2 bg-white text-black rounded-lg">
@@ -19,6 +19,7 @@ const AnalyticsDashboard = () => {
         In-depth data and visualizations to analyze traffic, user engagement,
         and content performance.
       </p>
+      <div className="py-4 text-2xl font-semibold">Traffic Overview</div>
     </div>
   );
 };
